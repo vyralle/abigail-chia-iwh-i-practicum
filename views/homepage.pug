@@ -2,20 +2,22 @@ doctype html
 html 
     head
         title= `${title}`
+        meta(charset='utf-8')
         meta(name='viewport' content='width=device-width, initial-scale=1')
         link(rel='stylesheet', href='/css/style.css')
-    body    
-        h1 Books
-        a.update-button(href='/update-cobj') Add/Update this table
+    body 
+        header   
+            h1 Books
+        a.button(href='/update-cobj') Add/Update this table
         
         table.center(style='width: 100%', border='1')
             tr
                 th 
-                    h2 Book Title 
+                    h4 Book Title 
                 th 
-                    h2 Author
+                    h4 Author
                 th 
-                    h2 Synopsis 
+                    h4 Synopsis 
 
             each book in data
                 tr
