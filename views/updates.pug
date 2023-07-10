@@ -1,0 +1,37 @@
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title #{title}
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+  link(rel='stylesheet', href="css/style.css")
+
+  body
+    a(href='/') Return to Homepage
+
+    h4.text-center Create a new Book
+    .modal-dialog
+        .modal-content
+          // Modal Body
+          .modal-body
+            form(role='form' method='POST' action='/update-cobj')
+              div.form-group
+                label(for='name') Name:
+                input#name.form-control(type='text', placeholder='Becoming' name='name')
+              div.form-group
+                label(for='author') Author:
+                input#author.form-control(type='text', placeholder='Michelle Obama' name='author')
+              div.form-group
+                label(for='synopsis') Synopsis:
+                textarea#synopsis.form-control(placeholder='Becoming is the memoir by former First Lady of the United States Michelle Obama, published on November 13, 2018.' name='synopsis')
+              div.form-group.hide
+                label(for='objectType') Object Type:
+                input#objectType.form-control(type='text', name='objectType', value='2-16530081')
+              button.btn.btn-primary(type="submit") Submit
+              button.btn.btn-default(type="button", data-dismiss="modal")
+                | Close
+          // Modal Footer
+          .modal-footer
+            p This form creates a new Book record in portal 40189383
+
+    // footer
+    

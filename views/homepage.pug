@@ -1,0 +1,21 @@
+doctype html
+html 
+    head
+        title= `${title}`
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/css/style.css')
+    body    
+        h1 Books
+        a(href='/update-cobj') Add/Update this table
+        
+        table(style='width: 100%', border='1')
+            tr
+                th Book Title 
+                th Author
+                th Synopsis 
+
+            each book in data
+                tr
+                    td #{book.properties.name}  
+                    td  #{book.properties.author}
+                    td #{book.properties.synopsis}
