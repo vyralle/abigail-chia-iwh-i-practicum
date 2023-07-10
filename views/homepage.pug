@@ -6,16 +6,22 @@ html
         link(rel='stylesheet', href='/css/style.css')
     body    
         h1 Books
-        a(href='/update-cobj') Add/Update this table
+        a.update-button(href='/update-cobj') Add/Update this table
         
-        table(style='width: 100%', border='1')
+        table.center(style='width: 100%', border='1')
             tr
-                th Book Title 
-                th Author
-                th Synopsis 
+                th 
+                    h2 Book Title 
+                th 
+                    h2 Author
+                th 
+                    h2 Synopsis 
 
             each book in data
                 tr
                     td #{book.properties.name}  
                     td  #{book.properties.author}
                     td #{book.properties.synopsis}
+        
+        footer
+            p &copy Copyright 2023
